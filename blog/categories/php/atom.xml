@@ -4,7 +4,7 @@
   <title><![CDATA[Category: php | Code Dominates]]></title>
   <link href="http://k.swd.cc/blog/categories/php/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2012-11-03T22:40:12+00:00</updated>
+  <updated>2012-11-03T23:26:05+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -32,7 +32,7 @@ $foo = new TwitterClient();
 $foo-&gt;tweet('Spot ko!'); // returns true
 </code></pre>
 
-<p>With PHPUnit, you're able to use Mock Object. Now your code looks like:</p>
+<p>With PHPUnit, you're able to use Mock Object instead. Now your code looks like:</p>
 
 <pre><code>class ClientContainerTest extends PHPUnit_Framework_TestCase
 {
@@ -112,34 +112,93 @@ $pdo-&gt;query('SELECT * FROM users;');
 
 <table>
   <tr>
-    <th>ID</th><th>Name</th><th>Rank</th>
+    <th>Framework</th>
+    <th>Required PHP Environment</th>
+    <th>Website</th>
+    <th>Note</th>
   </tr>
   <tr>
-    <td>1</td><td>Tom Preston-Werner</td><td>Awesome</td>
+    <td>PHPUnit</td>
+    <td>PHPUnit3.7: require PHP 5.3.3 and up(PHP 5.4.7+ is recommended)<br>PHPUnit3.6: require even with PHP 5.2</td>
+    <td>[Website](https://github.com/sebastianbergmann/phpunit)</td>
+    <td>[Sample Code](http://www.phpunit.de/manual/3.7/en/test-doubles.html)</td>
   </tr>
   <tr>
-    <td>2</td><td>Albert Einstein</td><td>Nearly as awesome</td>
+    <td>Mockery</td>
+    <td>PHP 5.3.2 and up</td>
+    <td>[Website](https://github.com/padraic/mockery)</td>
+    <td>[Sample Code](https://github.com/padraic/mockery/blob/master/tests/Mockery/ExpectationTest.php)</td>
+  </tr>
+  <tr>
+    <td>Phake</td>
+    <td>PHP 5.2.4 and up</td>
+    <td>[Website](https://github.com/mlively/Phake/)</td>
+    <td>[Sample Code](https://github.com/mlively/Phake/blob/master/tests/PhakeTest.php)</td>
+  </tr>
+  <tr>
+    <td>SimpleTest</td>
+    <td>SimpleTest1.1: require PHP 5.0.3 and up<br>Older version of Simpletest work with PHP 4</td>
+    <td>[Website](http://www.simpletest.org/)</td>
+    <td>[Sample Code](http://simpletest.org/en/mock_objects_documentation.html)</td>
+  </tr>
+  <tr>
+    <td>Phockito</td>
+    <td>(Not Yet Confirmed)</td>
+    <td>[Website](https://github.com/hafriedlander/phockito)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>yayMock</td>
+    <td>(Not Yet Confirmed)</td>
+    <td>[Website](http://code.google.com/p/yaymock/)</td>
+    <td>N/A</td>
   </tr>
 </table>
 
 
-<p>|~Framework|~Required PHP Environment|~Website|~Note|
-|PHPUnit|PHPUnit3.7: require PHP 5.3.3 and up(PHP 5.4.7+ is recommended) &br;PHPUnit3.6: require even with PHP 5.2|<a href="https://github.com/sebastianbergmann/phpunit">Website</a>|<a href="http://www.phpunit.de/manual/3.7/en/test-doubles.html">Sample Code</a>|
-|Mockery|PHP 5.3.2 and up|<a href="https://github.com/padraic/mockery">Website</a>|<a href="https://github.com/padraic/mockery/blob/master/tests/Mockery/ExpectationTest.php">Sample Code</a>|
-|Phake|PHP 5.2.4 and up|<a href="https://github.com/mlively/Phake/">Website</a>|<a href="https://github.com/mlively/Phake/blob/master/tests/PhakeTest.php">Sample Code</a>|
-|SimpleTest|SimpleTest1.1: require PHP 5.0.3 and up&br; Older version of Simpletest work with PHP 4|<a href="http://www.simpletest.org/">Website</a>|<a href="http://simpletest.org/en/mock_objects_documentation.html">Sample Code</a>|
-|Phockito|(Not Yet Confirmed)|<a href="https://github.com/hafriedlander/phockito">Website</a>|N/A|
-|yayMock|(Not Yet Confirmed)|<a href="http://code.google.com/p/yaymock/">Website</a>|N/A|</p>
-
 <p>From my quick skim, PHPUnit and Mockery look useful enough to me. And then, What is the pros/cons of these two mock frameworks and finally how to pick one?</p>
 
-<p>The table below shows what feature is simple comparison of mock framework features.
-|~Functionality|~PHPUnit&br;3.7|~Mockery&br;0.7.2|~Note|
-|Invocation Count Constraint|center:○&br;|center:◎&br;|Mockery is better. atMost() and atLeast() methods are available. |
-|Partial Mocking|center:○&br;|center:◎&br;|<a href="http://blog.sznapka.pl/why-mockery-is-better-than-phpunit-mock-builder-and-how-to-integrate-it-with-symfony2/">Constructer can be much simpler</a> in Mockery. |
-|Argument Matchers|center:○&br;|center:○&br;|<a href="http://www.phpunit.de/manual/3.6/en/writing-tests-for-phpunit.html">All mathers at table 4.3</a> are available in PHPUnit by with() call. About Mockery, refer <a href="https://github.com/padraic/mockery#argument-validation">README.md</a>|
-|Cascading Mocks|center:○&br;|center:◎&br;|Just a bit hustle with PHPUnit <a href="http://artur.ejsmont.org/blog/content/a-great-way-to-mock-chained-calls-in-phpunit">but doable</a> or (<a href="http://stackoverflow.com/questions/4232763/mock-objects-which-support-chaining-methods">like this</a>). With Mockery, here is example <a href="https://github.com/padraic/mockery#mocking-demeter-chains-and-fluent-interfaces">in README.md</a>|
-|Ordered Expectations|center:×&br;|center:○&br;|With Mockery it's possible but not comfortable|</p>
+<p>The table below shows what feature is simple comparison of mock framework features.</p>
+
+<table>
+  <tr>
+    <th>Functionality</th>
+    <th>PHPUnit 3.7</th>
+    <th>Mockery 0.7.2</th>
+    <th>Note</th>
+  </tr>
+  <tr>
+    <td>Invocation Count Constraint</td>
+    <td>OK</td>
+    <td>Love It</td>
+    <td>Mockery is better. atMost() and atLeast() methods are available.</td>
+  </tr>
+  <tr>
+    <td>Partial Mocking</td>
+    <td>OK</td>
+    <td>Very Good</td>
+    <td>[Constructer can be much simpler](http://blog.sznapka.pl/why-mockery-is-better-than-phpunit-mock-builder-and-how-to-integrate-it-with-symfony2/) in Mockery.</td>
+  </tr>
+  <tr>
+    <td>Argument Matchers</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td>[All mathers at table 4.3](http://www.phpunit.de/manual/3.6/en/writing-tests-for-phpunit.html) are available in PHPUnit by with() call. About Mockery, refer [README.md](https://github.com/padraic/mockery#argument-validation)</td>
+  </tr>
+  <tr>
+    <td>Cascading Mocks|center</td>
+    <td>OK</td>
+    <td>Excellent</td>
+    <td>Just a bit hustle with PHPUnit [but doable](http://artur.ejsmont.org/blog/content/a-great-way-to-mock-chained-calls-in-phpunit) or ([like this](http://stackoverflow.com/questions/4232763/mock-objects-which-support-chaining-methods)). With Mockery, here is example [in README.md](https://github.com/padraic/mockery#mocking-demeter-chains-and-fluent-interfaces)</td>
+  </tr>
+  <tr>
+    <td>Ordered Expectations</td>
+    <td>Can't</td>
+    <td>OK</td>
+    <td>With Mockery it's possible but not comfortable</td>
+  </tr>
+</table>
+
 
 <p>As you can see the table, Mockery 0.7.2 is definitely better in terms of functionality. Actually Mockery is better at other aspects as well:</p>
 
