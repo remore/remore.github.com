@@ -4,7 +4,7 @@
   <title><![CDATA[Code Dominates]]></title>
   <link href="http://k.swd.cc/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2012-11-03T23:33:16+00:00</updated>
+  <updated>2012-11-03T23:38:10+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -223,9 +223,7 @@ $pdo-&gt;query('SELECT * FROM users;');
 
 <h1>Code To Learn</h1>
 
-<p><img src="http://k.swd.cc/path/to/img.jpg" alt="Alt text" />
-&amp;img(http://rimuru.lunanet.gr.jp/files/2950/8001786818_6efb062bbf_m.jpg){};★
-http://www.growing-object-oriented-software.com/cover.jpg</p>
+<p><img src="http://k.swd.cc/images/blog/20121104-goos.jpg" alt="Goos Book" /></p>
 
 <p>You must know about the book &#8220;Growing Object-Oriented Software Guided by Tests&#8221; a.k.a #goos by Steve Freeman and Nat Pryce. And you also know that there was a book Steve and Nat contributed about same topic before goos?</p>
 
