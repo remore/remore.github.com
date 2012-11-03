@@ -4,7 +4,7 @@
   <title><![CDATA[Category: phpunit | Code Dominates]]></title>
   <link href="http://k.swd.cc/blog/categories/phpunit/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2012-11-03T23:26:05+00:00</updated>
+  <updated>2012-11-03T23:33:16+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -120,37 +120,37 @@ $pdo-&gt;query('SELECT * FROM users;');
   <tr>
     <td>PHPUnit</td>
     <td>PHPUnit3.7: require PHP 5.3.3 and up(PHP 5.4.7+ is recommended)<br>PHPUnit3.6: require even with PHP 5.2</td>
-    <td>[Website](https://github.com/sebastianbergmann/phpunit)</td>
-    <td>[Sample Code](http://www.phpunit.de/manual/3.7/en/test-doubles.html)</td>
+    <td><a href='https://github.com/sebastianbergmann/phpunit'>Website</a></td>
+    <td><a href='http://www.phpunit.de/manual/3.7/en/test-doubles.html'>Sample Code</a></td>
   </tr>
   <tr>
     <td>Mockery</td>
     <td>PHP 5.3.2 and up</td>
-    <td>[Website](https://github.com/padraic/mockery)</td>
-    <td>[Sample Code](https://github.com/padraic/mockery/blob/master/tests/Mockery/ExpectationTest.php)</td>
+    <td><a href='https://github.com/padraic/mockery'>Website</a></td>
+    <td><a href='https://github.com/padraic/mockery/blob/master/tests/Mockery/ExpectationTest.php'>Sample Code</a></td>
   </tr>
   <tr>
     <td>Phake</td>
     <td>PHP 5.2.4 and up</td>
-    <td>[Website](https://github.com/mlively/Phake/)</td>
-    <td>[Sample Code](https://github.com/mlively/Phake/blob/master/tests/PhakeTest.php)</td>
+    <td><a href='https://github.com/mlively/Phake/'>Website</a></td>
+    <td><a href='https://github.com/mlively/Phake/blob/master/tests/PhakeTest.php'>Sample Code</a></td>
   </tr>
   <tr>
     <td>SimpleTest</td>
     <td>SimpleTest1.1: require PHP 5.0.3 and up<br>Older version of Simpletest work with PHP 4</td>
-    <td>[Website](http://www.simpletest.org/)</td>
-    <td>[Sample Code](http://simpletest.org/en/mock_objects_documentation.html)</td>
+    <td><a href='http://www.simpletest.org/'>Website</a></td>
+    <td><a href='http://simpletest.org/en/mock_objects_documentation.html'>Sample Code</a></td>
   </tr>
   <tr>
     <td>Phockito</td>
     <td>(Not Yet Confirmed)</td>
-    <td>[Website](https://github.com/hafriedlander/phockito)</td>
+    <td><a href='https://github.com/hafriedlander/phockito'>Website</a></td>
     <td>N/A</td>
   </tr>
   <tr>
     <td>yayMock</td>
     <td>(Not Yet Confirmed)</td>
-    <td>[Website](http://code.google.com/p/yaymock/)</td>
+    <td><a href='http://code.google.com/p/yaymock/'>Website</a></td>
     <td>N/A</td>
   </tr>
 </table>
@@ -177,19 +177,19 @@ $pdo-&gt;query('SELECT * FROM users;');
     <td>Partial Mocking</td>
     <td>OK</td>
     <td>Very Good</td>
-    <td>[Constructer can be much simpler](http://blog.sznapka.pl/why-mockery-is-better-than-phpunit-mock-builder-and-how-to-integrate-it-with-symfony2/) in Mockery.</td>
+    <td><a href='http://blog.sznapka.pl/why-mockery-is-better-than-phpunit-mock-builder-and-how-to-integrate-it-with-symfony2/'>Constructer can be much simpler</a> in Mockery.</td>
   </tr>
   <tr>
     <td>Argument Matchers</td>
     <td>OK</td>
     <td>OK</td>
-    <td>[All mathers at table 4.3](http://www.phpunit.de/manual/3.6/en/writing-tests-for-phpunit.html) are available in PHPUnit by with() call. About Mockery, refer [README.md](https://github.com/padraic/mockery#argument-validation)</td>
+    <td><a href='http://www.phpunit.de/manual/3.6/en/writing-tests-for-phpunit.html'>All mathers at table 4.3</a> are available in PHPUnit by with() call. About Mockery, refer <a href='https://github.com/padraic/mockery#argument-validation'>README.md</a></td>
   </tr>
   <tr>
     <td>Cascading Mocks|center</td>
     <td>OK</td>
     <td>Excellent</td>
-    <td>Just a bit hustle with PHPUnit [but doable](http://artur.ejsmont.org/blog/content/a-great-way-to-mock-chained-calls-in-phpunit) or ([like this](http://stackoverflow.com/questions/4232763/mock-objects-which-support-chaining-methods)). With Mockery, here is example [in README.md](https://github.com/padraic/mockery#mocking-demeter-chains-and-fluent-interfaces)</td>
+    <td>Just a bit hustle with PHPUnit <a href='http://artur.ejsmont.org/blog/content/a-great-way-to-mock-chained-calls-in-phpunit'>but doable</a> or (<a href='http://stackoverflow.com/questions/4232763/mock-objects-which-support-chaining-methods'>like this</a>). With Mockery, here is example <a href='https://github.com/padraic/mockery#mocking-demeter-chains-and-fluent-interfaces'>in README.md</a></td>
   </tr>
   <tr>
     <td>Ordered Expectations</td>
