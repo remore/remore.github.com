@@ -3,11 +3,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Blog Archives - Code Dominates</title>
+	<title>Setting Up Blog With Octopress On Github Pages - Code Dominates</title>
 	<meta name="author" content="Kei Sawada">
 
 	
-	<meta name="description" content=" 2012 Nov 4 Setting Up Blog With Octopress On Github Pages Nov 3 php, phpunit Mock object in PHPUnit ROCKS ">
+	<meta name="description" content="Here is my command log to setup this this blog with octopress on github pages. # Create new EC2 intance(micro)
+yum update
+yum install make git ruby- &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -75,44 +77,56 @@
 
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner">
-	
+				<div id="content" class="inner"><article class="post">
+	<h1 class="title">Setting Up Blog With Octopress on Github Pages</h1>
+	<div class="entry-content"><p>Here is my command log to setup this this blog with octopress on github pages.</p>
 
+<pre><code># Create new EC2 intance(micro)
+yum update
+yum install make git ruby-devel gcc rdoc zlib-devel
 
-	
-	
-	<section class="archives"><h1 class="year">2012</h1>
+# Install rvm
+curl -L https://get.rvm.io | bash -s stable
+source "$HOME/.rvm/scripts/rvm"
 
-<article>
-	<div class="meta">
-		<span class="date">Nov  4</span>
-		<br>
-		<span class="tags">
+# Install ruby1.9.3
+rvm get head
+rvm install 1.9.3
+rvm use 1.9.3
 
-</span>
-	    
-	</div>
-	<h1 class="title"><a href="/blog/2012/11/04/setting-up-blog-with-octopress-on-github-pages/">Setting Up Blog With Octopress On Github Pages</a></h1>
+# Install bundler
+gem install bundler
+
+# Install octpress
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+bundle install --path vendor
+rake setup_github_pages # answer your github page url
+rake install
+
+# Build and deploy
+rake generate
+rake deploy
+</code></pre>
+
+<p>Note that user permission and current folders are not considered carefully.</p>
+</div>
+
 </article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 	
-
-
-<article>
-	<div class="meta">
-		<span class="date">Nov  3</span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/php/'>php</a>, <a class='category' href='/blog/categories/phpunit/'>phpunit</a>
-
-
-</span>
-	    
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
-	<h1 class="title"><a href="/blog/2012/11/03/mock-object-in-phpunit-rocks/">Mock object in PHPUnit ROCKS</a></h1>
-</article>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
 </div>
 			</div>
 			<footer id="footer" class="inner">Copyright &copy; 2012

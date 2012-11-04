@@ -4,7 +4,7 @@
   <title><![CDATA[Code Dominates]]></title>
   <link href="http://k.swd.cc/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2012-11-03T23:38:10+00:00</updated>
+  <updated>2012-11-04T00:38:15+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up Blog With Octopress On Github Pages]]></title>
+    <link href="http://k.swd.cc/blog/2012/11/04/setting-up-blog-with-octopress-on-github-pages/"/>
+    <updated>2012-11-04T00:37:00+00:00</updated>
+    <id>http://k.swd.cc/blog/2012/11/04/setting-up-blog-with-octopress-on-github-pages</id>
+    <content type="html"><![CDATA[<p>Here is my command log to setup this this blog with octopress on github pages.</p>
+
+<pre><code># Create new EC2 intance(micro)
+yum update
+yum install make git ruby-devel gcc rdoc zlib-devel
+
+# Install rvm
+curl -L https://get.rvm.io | bash -s stable
+source "$HOME/.rvm/scripts/rvm"
+
+# Install ruby1.9.3
+rvm get head
+rvm install 1.9.3
+rvm use 1.9.3
+
+# Install bundler
+gem install bundler
+
+# Install octpress
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+bundle install --path vendor
+rake setup_github_pages # answer your github page url
+rake install
+
+# Build and deploy
+rake generate
+rake deploy
+</code></pre>
+
+<p>Note that user permission and current folders are not considered carefully.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mock object in PHPUnit ROCKS]]></title>

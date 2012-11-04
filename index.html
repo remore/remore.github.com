@@ -7,10 +7,9 @@
 	<meta name="author" content="Kei Sawada">
 
 	
-	<meta name="description" content="Suppose you fake it like this: class TwitterClient
-{ public function tweet($message) { return true; }
-} $foo = new TwitterClient();
-$foo-&gt;tweet(' &hellip;">
+	<meta name="description" content="Here is my command log to setup this this blog with octopress on github pages. # Create new EC2 intance(micro)
+yum update
+yum install make git ruby- &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -79,6 +78,67 @@ $foo-&gt;tweet(' &hellip;">
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-04T00:37:00+00:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2012/11/04/setting-up-blog-with-octopress-on-github-pages/">Setting Up Blog With Octopress on Github Pages</a></h1>
+	<div class="entry-content">
+		<p>Here is my command log to setup this this blog with octopress on github pages.</p>
+
+<pre><code># Create new EC2 intance(micro)
+yum update
+yum install make git ruby-devel gcc rdoc zlib-devel
+
+# Install rvm
+curl -L https://get.rvm.io | bash -s stable
+source "$HOME/.rvm/scripts/rvm"
+
+# Install ruby1.9.3
+rvm get head
+rvm install 1.9.3
+rvm use 1.9.3
+
+# Install bundler
+gem install bundler
+
+# Install octpress
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+bundle install --path vendor
+rake setup_github_pages # answer your github page url
+rake install
+
+# Build and deploy
+rake generate
+rake deploy
+</code></pre>
+
+<p>Note that user permission and current folders are not considered carefully.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
