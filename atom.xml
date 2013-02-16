@@ -4,7 +4,7 @@
   <title><![CDATA[Code Dominates]]></title>
   <link href="http://k.swd.cc/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2012-11-04T04:02:02+00:00</updated>
+  <updated>2013-02-16T22:03:25+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[setting-up-php54-composer-application-on-windows]]></title>
+    <link href="http://k.swd.cc/blog/2013/02/16/setting-up-php54-composer-application-on-windows/"/>
+    <updated>2013-02-16T22:02:00+00:00</updated>
+    <id>http://k.swd.cc/blog/2013/02/16/setting-up-php54-composer-application-on-windows</id>
+    <content type="html"><![CDATA[<p>I liked Chocolatey which had been talked at HN two weeks ago: <a href="http://news.ycombinator.com/item?id=5175483">&#8220;Kinda like apt-get, but for Windows&#8221;</a>. But how much is it useful actually?</p>
+
+<p>Let&#8217;s see it by getting PHP5.4 application work on Windows environment.</p>
+
+<h2>Setting Up PHP5.4 On Windows</h2>
+
+<ul>
+<li><a href="http://windows.php.net/download/">Download zipped PHP 5.4.XX binary</a></li>
+<li>Unzip them and rename the folder(assuming &#8220;C:\php54&#8221; is the folder name)</li>
+<li>Rename &#8220;C:\php54\php.ini-development&#8221; to &#8220;C:\php54\php.ini&#8221;</li>
+</ul>
+
+
+<p>And lastly, edit C:\php54\php.ini and make following two extensions enable by trimming semicolon:</p>
+
+<pre><code>extension=php_curl.dll
+extension=php_openssl.dll
+</code></pre>
+
+<p>Don&#8217;t forget to set the PATH system variable from system settings. For example:</p>
+
+<pre><code>...;C:\php54;
+</code></pre>
+
+<h2>Getting Cinst And Composer Ready</h2>
+
+<p>Hit the command to get <a href="http://chocolatey.org/">cinst</a> ready:</p>
+
+<pre><code>C:\&gt; @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('http://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH=%PATH%;%systemdrive%\chocolatey\bin
+</code></pre>
+
+<p>Install curl, git and svn commands as applications available on Composer often depend on them.</p>
+
+<pre><code>C:\&gt; cinst curl
+C:\&gt; cinst git
+C:\&gt; cinst svn
+</code></pre>
+
+<h2>Here You Go</h2>
+
+<p>This is just an example to install <a href="https://github.com/koriym/BEAR.Package">BEAR.Package</a>. See <a href="http://code.google.com/p/bearsunday/wiki/install">the official wiki</a> if you need for more detailed instruction.</p>
+
+<pre><code>C:\tmp&gt; curl -s http://getcomposer.org/installer | php
+C:\tmp&gt; php composer.phar create-project -s dev --dev bear/package ./bear
+C:\tmp&gt; php .\bear\apps\Helloworld\public\min.php
+HelloWorld!
+</code></pre>
+
+<h2>Note</h2>
+
+<p>At this moment(Feb 17th, 2013), Installing PHP5.4 via cinst failed due to 404 error:</p>
+
+<pre><code>C:\&gt; cinst curl php5-dev
+</code></pre>
+
+<p>Either cinst or php5-dev seems not maintainanced very well. I already commented this to <a href="http://chocolatey.org/packages/php5-dev">the owner page of php5-dev</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting Up Blog With Octopress On Github Pages]]></title>
