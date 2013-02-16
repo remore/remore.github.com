@@ -4,7 +4,7 @@
   <title><![CDATA[Code Dominates]]></title>
   <link href="http://k.swd.cc/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2013-02-16T22:19:44+00:00</updated>
+  <updated>2013-02-16T22:24:49+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -58,7 +58,7 @@ C:\&gt; cinst svn
 
 <h2>Here You Go</h2>
 
-<p>This is just an example to install <a href="https://github.com/koriym/BEAR.Package">BEAR.Package</a>. See <a href="http://code.google.com/p/bearsunday/wiki/install">the official wiki</a> if you need for more detailed instruction.</p>
+<p>This is just an example to install <a href="https://github.com/koriym/BEAR.Package">BEAR.Package</a>. See <a href="http://code.google.com/p/bearsunday/wiki/install">the official wiki</a> if you need more detailed instruction.</p>
 
 <pre><code>C:\tmp&gt; curl -s http://getcomposer.org/installer | php
 C:\tmp&gt; php composer.phar create-project -s dev --dev bear/package ./bear
