@@ -4,7 +4,7 @@
   <title><![CDATA[Code Dominates]]></title>
   <link href="http://k.swd.cc/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2013-02-16T22:03:25+00:00</updated>
+  <updated>2013-02-16T22:06:58+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[setting-up-php54-composer-application-on-windows]]></title>
+    <title type="html"><![CDATA[Setting Up PHP5.4/Composer Application On Windows, With A Little Awkward Cinst]]></title>
     <link href="http://k.swd.cc/blog/2013/02/16/setting-up-php54-composer-application-on-windows/"/>
     <updated>2013-02-16T22:02:00+00:00</updated>
     <id>http://k.swd.cc/blog/2013/02/16/setting-up-php54-composer-application-on-windows</id>
