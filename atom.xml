@@ -4,7 +4,7 @@
   <title><![CDATA[Code Dominates]]></title>
   <link href="http://k.swd.cc/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2013-02-16T22:24:49+00:00</updated>
+  <updated>2013-02-16T22:30:04+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -18,7 +18,7 @@
     <link href="http://k.swd.cc/blog/2013/02/16/setting-up-php54-composer-application-on-windows/"/>
     <updated>2013-02-16T22:02:00+00:00</updated>
     <id>http://k.swd.cc/blog/2013/02/16/setting-up-php54-composer-application-on-windows</id>
-    <content type="html"><![CDATA[<p>I liked Chocolatey which had been talked at HN two weeks ago: <a href="http://news.ycombinator.com/item?id=5175483">&#8220;Kinda like apt-get, but for Windows&#8221;</a>. But how much is it useful actually?</p>
+    <content type="html"><![CDATA[<p>I liked Chocolatey concept which had been talked at HN two weeks ago: <a href="http://news.ycombinator.com/item?id=5175483">&#8220;Kinda like apt-get, but for Windows&#8221;</a>. But how much is it useful actually?</p>
 
 <p>Let&#8217;s see it by getting PHP5.4 application work on Windows environment.</p>
 
