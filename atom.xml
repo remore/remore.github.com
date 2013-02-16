@@ -4,7 +4,7 @@
   <title><![CDATA[Code Dominates]]></title>
   <link href="http://k.swd.cc/atom.xml" rel="self"/>
   <link href="http://k.swd.cc/"/>
-  <updated>2013-02-16T22:16:56+00:00</updated>
+  <updated>2013-02-16T22:19:44+00:00</updated>
   <id>http://k.swd.cc/</id>
   <author>
     <name><![CDATA[Kei Sawada]]></name>
@@ -42,14 +42,14 @@ extension=php_openssl.dll
 <pre><code>...;C:\php54;
 </code></pre>
 
-<h2>Getting Cinst And Composer Ready</h2>
+<h2>Getting Chocolatey And Composer Ready</h2>
 
-<p>Hit the command to get <a href="http://chocolatey.org/">cinst</a> ready:</p>
+<p>Hit the command to get <a href="http://chocolatey.org/">chocolatey</a> ready:</p>
 
 <pre><code>C:\&gt; @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('http://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH=%PATH%;%systemdrive%\chocolatey\bin
 </code></pre>
 
-<p>Install curl, git and svn commands as applications available on Composer often depend on them.</p>
+<p>Install curl, git and svn commands <em>with chocolatey</em>, as applications available on Composer often depend on them.</p>
 
 <pre><code>C:\&gt; cinst curl
 C:\&gt; cinst git
