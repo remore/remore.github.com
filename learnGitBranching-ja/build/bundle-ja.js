@@ -6602,19 +6602,19 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
   ///////////////////////////////////////////////////////////////////////////
   'finish-dialog-finished': {
     '__desc__': 'One of the lines in the next level dialog',
-    'en_US': 'Wow! You finished the last level, great!',
+    'en_US': '最後のレベルをクリアしました！すごい！！',
     'zh_CN': '我的个天！你完成了最后一关，碉堡了！'
   },
   ///////////////////////////////////////////////////////////////////////////
   'finish-dialog-next': {
     '__desc__': 'One of the lines in the next level dialog',
-    'en_US': 'Would you like to move onto *"{nextLevel}"*, the next level?',
+    'en_US': '次の章 *"{nextLevel}"* へ進みますか？',
     'zh_CN': '要不前进到下一关 *“{nextLevel}”*？'
   },
   ///////////////////////////////////////////////////////////////////////////
   'finish-dialog-win': {
     '__desc__': 'One of the lines in the next level dialog',
-    'en_US': 'Awesome! You matched or exceeded our solution.',
+    'en_US': '素晴らしい！このレベルをクリアしましたね。',
     'zh_CN': '牛鼻啊！你达到或者完爆了我们的答案。'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -13512,10 +13512,10 @@ require.define("/src/js/dialogs/nextLevel.js",function(require,module,exports,__
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## Great Job!!',
+        '## 完成!',
         '',
-        'You solved the level in *{numCommands}* command(s); ',
-        'our solution uses {best}.'
+        'あなたは*{numCommands}*回のコマンドでこの課題をクリアしました; ',
+        '模範解答では{best}回です。'
       ]
     }
   }],
@@ -14814,7 +14814,7 @@ var GitDemonstrationView = ContainedBase.extend({
     this.JSON = _.extend(
       {
         beforeMarkdowns: [
-          '## git commit',
+          '## Gitのコミット',
           '',
           'Awesome!'
         ],
@@ -17889,18 +17889,18 @@ require.define("/levels/intro/1.js",function(require,module,exports,__dirname,__
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "## git commit",
-              "git commitを使うことで、ディレクトリ中の全てのファイルのスナップショットを記録できます。壮大なコピペのような動作を連想しますが、実はそれよりずっと良いものです。",
+              "## Gitのコミット",
+              "コミットによって、ディレクトリ中の全てのファイルのスナップショットを記録します。巨大なコピー＆ペーストのようなものですが、実はそれよりずっと良いものです。",
               "",
               "Gitではコミットを可能な限り軽量に保つために、コミット毎にフォルダ全体をコピーしません。実際にはGitは、コミットを直前のバージョンから一つ先のバージョンへの「変更の固まり」あるいは「差分」として記録します。後で出てきますが、ほとんどのコミットが親を持っているのはそういう理由からです。",
               "",
-              "リポジトリをcloneする時には、内部動作としてはコミットの差分をたどって全ての変更を取得しています。cloneした時に以下のような表示が出るのは",
+              "リポジトリをcloneする時には、内部動作としてはコミットの差分をたどって全ての変更を取得しています。cloneした時に以下のような表示が出るのは：",
               "",
               "`resolving deltas`（訳：差分を解決中）",
               "",
               "このためです。",
               "",
-              "本当はもっと説明したいのですが、当面はコミットをスナップショットのようなものだと考えてください。コミットは非常に軽量であり、コミット間の移動も非常に高速です。"
+              "もっと説明したいところですが、しばらくはコミットをスナップショットのようなものだと考えてください。コミットは非常に軽量であり、コミット間の移動も非常に高速です。"
             ]
           }
         },
@@ -17908,12 +17908,12 @@ require.define("/levels/intro/1.js",function(require,module,exports,__dirname,__
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "これがどういうことか、動きを見ていきましょう。図には小さなgitリポジトリが描かれています。仮に2つのコミットがあるとします - 一つは最初のコミットで、`C0`という名前です。次のコミットは`C1`で、何か意味のある変更だとします。",
+              "これがどういうことか、動きを見ていきましょう。図には（小さな）gitリポジトリが描かれています。コミットが2つあります ― `C0`という名前の初回のコミットがあり、`C1`という名前の次のコミットが続きます。これは何か意味のある変更かもしれません。",
               "",
               "下のボタンを押下して新しいコミットを作ってみましょう。"
             ],
             "afterMarkdowns": [
-              "できました! 良いですね。いまリポジトリに新しい変更が加えられ、1つのコミットとして保存されました。作成したコミットには親がいて、`C1`を指しています。これがどのコミットを出発点とした変更かを示しています。"
+              "できました! 良いですね。いまリポジトリに新しい変更が加えられ、1つのコミットとして保存されました。作成したコミットには親がいて、このコミットの出発点となった`C1`を指しています。"
             ],
             "command": "git commit",
             "beforeCommand": ""
@@ -18025,7 +18025,7 @@ require.define("/levels/intro/1.js",function(require,module,exports,__dirname,__
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "## git commit",
+              "## Gitのコミット",
               "在一个使用 git 进行版本控制的仓库里，一次提交（commit）给你目录下所有文件做了一次快照，就好像是做了一次复制粘贴，但 git 做的不只那么简单！",
               "",
               "Git 希望尽可能地让这些提交记录保持轻量，所以每次在你进行提交的时候，它不会就这么复制整个工作目录。实际上它把每次提交都记录为一个相对于上个版本变化的集合，或者说一个\"差异 （delta）\"集。这也是为什么绝大部分提交都有一个父对象（parent commit） -- 迟点你就会在我们的演示中看见了。",
@@ -18095,15 +18095,15 @@ require.define("/levels/intro/2.js",function(require,module,exports,__dirname,__
             "markdowns": [
               "## Gitのブランチ",
               "",
-              "Gitではコミットだけでなく、ブランチもまた驚くほど軽量です。ブランチとは単に特定のコミットを指示したポインタにしか過ぎません。Gitの達人は決まってこう言います：",
+              "Gitではコミットだけでなく、ブランチもまた信じられないほど軽量です。ブランチとは単に特定のコミットを指示したポインタにしか過ぎません。Gitの達人は決まってこう言うのは、そのためです：",
               "",
               "```",
               "早めに、かつ頻繁にブランチを切りなさい",
               "```",
               "",
-              "どれほど多くのブランチを作ってもストレージやメモリを全然使わないので、ブランチを切る方が肥大化させるよりも簡単なのです。",
+              "どれほど多くのブランチを作ってもストレージやメモリを全然使わないので、ブランチを肥大化させるよりも論理的に分割していく方が簡単なのです。",
               "",
-              "ブランチやコミットを編集し始めると、これらのフィーチャがどのように使われていくががわかります。ここではとりあえず、ブランチは基本的には「あるコミットとその親のコミットたちを含めた全てのコミット」のことを呼ぶと覚えておいてください。"
+              "ブランチとコミットをあわせて使い始めると、これら2つのフィーチャがどのように連動して機能するかがわかるでしょう。ここではとりあえず、ブランチは基本的には「あるコミットとその親のコミットたちを含めた全てのコミット」のことを呼ぶと覚えておいてください。"
             ]
           }
         },
@@ -18111,12 +18111,12 @@ require.define("/levels/intro/2.js",function(require,module,exports,__dirname,__
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "実際にブランチがどのように機能するかを見ていきましょう。",
+              "では実際にブランチがどのようなものかを見ていきましょう。",
               "",
               "`newImage`という名前の新しいブランチを切ってみることにします。"
             ],
             "afterMarkdowns": [
-              "必要な手順はこれだけです。いま作成された`newImage`ブランチは`C1`コミットを指しています。"
+              "以上。必要な手順はこれだけです。いま作成された`newImage`ブランチは`C1`コミットを指しています。"
             ],
             "command": "git branch newImage",
             "beforeCommand": ""
@@ -18139,16 +18139,16 @@ require.define("/levels/intro/2.js",function(require,module,exports,__dirname,__
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "gitに作業したいブランチ名を伝えることにしましょう。",
+              "今度は作業したいブランチ名をgitに伝えてみましょう。",
               "",
               "```",
               "git checkout [ブランチ名]",
               "```",
               "",
-              "これで作業ブランチを変更することができます。"
+              "このようにして、コミットする前に新しいブランチへと作業ブランチを移動することができます。"
             ],
             "afterMarkdowns": [
-              "できましたね。新しいブランチに対して変更を記録することができました。"
+              "できましたね。今度は新しいブランチに対して変更を記録することができました。"
             ],
             "command": "git checkout newImage; git commit",
             "beforeCommand": "git branch newImage"
@@ -18414,7 +18414,7 @@ require.define("/levels/intro/3.js",function(require,module,exports,__dirname,__
     "zh_CN": "Git合并(Merge)"
   },
   "hint": {
-    "en_US": "Remember to commit in the order specified (bugFix before master)",
+    "en_US": "指示された順番でコミットすること（masterの前にbugFixで）",
     "fr_FR": "Pensez à faire des commits dans l'ordre indiqué (bugFix avant master)",
     "zh_CN": "记得按照给定的顺序来进行提交(commit) （bugFix 要在 master 之前）",
     "ko": "말씀드린 순서대로 커밋해주세요 (bugFix에 먼저 커밋하고 master에 커밋)"
@@ -18431,9 +18431,9 @@ require.define("/levels/intro/3.js",function(require,module,exports,__dirname,__
             "markdowns": [
               "## ブランチとマージ",
               "",
-              "いい調子だね。コミットとブランチはもう分かったと思う。そろそろ2つのブランチを1つにまとめるやり方について見ていこう。これができれば新しいフィーチャの開発のために新しいブランチを切ることができるようになる。",
+              "いい調子ですね。これまでにコミットとブランチについて学びました。そろそろ2つのブランチを1つにまとめるやり方について見ていきましょう。これができれば新しいフィーチャの開発のために新しいブランチを切って、開発が終わったら変更を元のブランチへ統合することができるようになります。",
               "",
-              "まずは`git merge`を使ったマージのやり方から見ていこう。マージすると、2つの親コミットを持つ新しいコミットが生まれる。2つの親コミットを持つことによって、「私の内容には2つの親コミットとその先祖の全ての変更を含んでいる」ということを意味します。",
+              "はじめに紹介するのは、`git merge`を使ったマージのやり方です。mergeコマンドによって、2つの独立した親を持つ特別なコミットを作ることができます。2つの親を持つコミットが持つ意味とは、「全く別々の場所にいるこの親とその親（*かつ*、それらの親の祖先全て）が持つ全ての変更を含んでいますよ」ということです。",
               "",
               "見てみた方が早いので、次の画面で確認してみましょう。"
             ]
@@ -18443,16 +18443,16 @@ require.define("/levels/intro/3.js",function(require,module,exports,__dirname,__
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "それぞれ別のコミットを指している2つのブランチがあります。最新のコードが別のブランチに分散していて統合されていないケースです。これをマージで1つにまとめてみましょう。",
+              "それぞれ別のコミットを指している2つのブランチがあります。変更が別々のブランチに分散していて統合されていないケースです。これをマージで1つにまとめてみましょう。",
               "",
-              "`bugFix`ブランチを`master`ブランチにマージしたい場合は、"
+              "`bugFix`ブランチを`master`ブランチにマージしてみます。"
             ],
             "afterMarkdowns": [
-              "わあ、見た見た？`master`ブランチが2つのコミットを親に持つ新しいコミットを指してますね。`master`から親をたどっていくと、最も古いコミットにたどり着くまでに全てのコミットを含んでいる様が確認できます。これで、全てのコードを含む`master`が完成しました。",
+              "わあ。見ましたか？まず初めに、`master`ブランチが2つのコミットを親に持つ新しいコミットを指してますね。`master`から親をたどっていくと、最も古いコミットにたどり着くまでに全てのコミットを含んでいる様が確認できます。これで、全ての変更を含む`master`が完成しました。",
               "",
-              "色がどう変わったかにも注目してみよう。学習を助けるために、ブランチ毎に色をつけています。どのブランチから派生して出てくるか次第で、コミットごとの色が決まります。",
+              "色がどう変わったかにも注目して下さい。学習を助けるために、ブランチ毎に色をつけています。それぞれのブランチは自分の色を持っていて、どのブランチから派生して出てくるか次第でコミットごとの色が決まります。",
               "",
-              "話を戻して、今回のコミットには`master`ブランチの色が使われました。`bugFix`ブランチの色は変わってないようなので、これを変えてみましょう。"
+              "今回のコミットには`master`ブランチの色が使われました。しかし`bugFix`ブランチの色がまだ変わってないようなので、これを変えてみましょう。"
             ],
             "command": "git merge bugFix",
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit"
@@ -18465,9 +18465,9 @@ require.define("/levels/intro/3.js",function(require,module,exports,__dirname,__
               "`master`ブランチを`bugFix`ブランチにマージしてみます。"
             ],
             "afterMarkdowns": [
-              "`bugFix`ブランチは`master`ブランチの派生元だったので、gitは大したことはしていません：`bugFix`ブランチを指していたポインタを`master`が指していたコミットへと移動させただけです。",
+              "`bugFix`ブランチは`master`ブランチの派生元だったので、gitは実際大したことはしていません：`bugFix`ブランチを指していたポインタを`master`が指していたコミットへと移動させただけです。",
               "",
-              "これで全てのコミットが同じ色になりました。つまり、両方のブランチがリポジトリの中の全ての変更を持ったことになります。やったね！"
+              "これで全てのコミットが同じ色になりました。つまり、リポジトリの中の全ての変更をそれぞれのブランチが持ったことになります。やったね！"
             ],
             "command": "git checkout bugFix; git merge master",
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit; git merge bugFix"
@@ -18477,7 +18477,7 @@ require.define("/levels/intro/3.js",function(require,module,exports,__dirname,__
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "今回のレベルの仕上げに、下記の手順を試してみよう：",
+              "今回のレベルの仕上げに、下記の手順を試してみましょう：",
               "",
               "* `bugFix`という名前で新しいブランチを切る",
               "* `git checkout bugFix`コマンドで`bugFix`ブランチをチェックアウトする",
@@ -18512,16 +18512,16 @@ require.define("/levels/intro/3.js",function(require,module,exports,__dirname,__
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "それぞれ別のコミットを指している2つのブランチがあります。最新のコードが別のブランチに分散していて統合されていないケースです。これをマージで1つにまとめてみましょう。",
+              "それぞれ別のコミットを指している2つのブランチがあります。変更が別々のブランチに分散していて統合されていないケースです。これをマージで1つにまとめてみましょう。",
               "",
-              "`bugFix`ブランチを`master`ブランチにマージしたい場合は、"
+              "`bugFix`ブランチを`master`ブランチにマージしてみます。"
             ],
             "afterMarkdowns": [
-              "わあ、見た見た？`master`ブランチが2つのコミットを親に持つ新しいコミットを指してますね。`master`から親をたどっていくと、最も古いコミットにたどり着くまでに全てのコミットを含んでいる様が確認できます。これで、全てのコードを含む`master`が完成しました。",
+              "わあ。見ましたか？まず初めに、`master`ブランチが2つのコミットを親に持つ新しいコミットを指してますね。`master`から親をたどっていくと、最も古いコミットにたどり着くまでに全てのコミットを含んでいる様が確認できます。これで、全ての変更を含む`master`が完成しました。",
               "",
-              "色がどう変わったかにも注目してみよう。学習を助けるために、ブランチ毎に色をつけています。どのブランチから派生して出てくるか次第で、コミットごとの色が決まります。",
+              "色がどう変わったかにも注目して下さい。学習を助けるために、ブランチ毎に色をつけています。それぞれのブランチは自分の色を持っていて、どのブランチから派生して出てくるか次第でコミットごとの色が決まります。",
               "",
-              "話を戻して、今回のコミットには`master`ブランチの色が使われました。`bugFix`ブランチの色は変わってないようなので、これを変えてみましょう。"
+              "今回のコミットには`master`ブランチの色が使われました。しかし`bugFix`ブランチの色がまだ変わってないようなので、これを変えてみましょう。"
             ],
             "command": "git merge bugFix",
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit"
@@ -18731,11 +18731,11 @@ require.define("/levels/intro/4.js",function(require,module,exports,__dirname,__
             "markdowns": [
               "## Git Rebase",
               "",
-              "前回紹介したマージに続いて、ブランチを一つにまとめるために今回紹介するリベースを使うこともできる。リベースの動作は、マージするコミットのコピーをとってストンと落とすって感じ。",
+              "ブランチを一つにまとめる方法として前回はマージを紹介しましたが、今回紹介するリベースを使うこともできます。リベースの動作は、マージするコミットのコピーをとって、どこかにストンと落とすというイメージです。",
               "",
-              "まだしっくりこないと思うんだけど、リベースのメリットは一本の連続したシーケンシャルなコミットに整形できることなんだ。リベースだけ使っていれば、コミットのログや履歴をクリーンな状態に保ちやすい。",
+              "ピンと来ないかもしれませんが、リベースのメリットは一本の連続したシーケンシャルなコミットに整形できることです。リベースだけ使っていると、コミットのログや履歴が非常にクリーンな状態に保たれます。",
               "",
-              "早速実際にどう動くのかを見てみよう。"
+              "早速実際にどう動くのかを見てみましょう。"
             ]
           }
         },
@@ -18743,18 +18743,18 @@ require.define("/levels/intro/4.js",function(require,module,exports,__dirname,__
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "もう1度2つのブランチを例にして説明すると：仮にいまbugFixブランチをチェックアウトしているとする。（アスタリスクつきのやつ）",
+              "前回と同様の2つのブランチを考えます：仮にいまbugFixブランチをチェックアウトしているとします。（アスタリスクつきのもの）",
               "",
-              "bufFixに入ってる作業内容をそのまま直接masterブランチ上の内容に移動したい。こうすることで、実際には並行して開発された2つの別々のブランチ上のフィーチャを、あたかも1本のブランチ上でシーケンシャルに開発されたように見せれる。",
+              "bugFixに入ってる作業内容をそのまま直接masterブランチ上の内容に移動したいとします。こうすることで、実際には並行して開発された2つの別々のブランチ上のフィーチャを、あたかも1本のブランチ上でシーケンシャルに開発されていたかのように見せることができます。",
               "",
-              "`git rebase`コマンドでそれをやってみよう。"
+              "`git rebase`コマンドでそれをやってみましょう。"
             ],
             "afterMarkdowns": [
-              "できた！これでbugFixブランチの作業内容はmasterブランチのすぐ先に移動したから、見た目が一本になってスッキリした。",
+              "できた！これでbugFixブランチの作業内容はmasterブランチのすぐ先に移動したので、見た目が一本になってスッキリしました。",
               "",
-              "気を付けてほしいのは、C3コミットはどこかに残ってるということ（ツリーの中で半透明にしてある）、そしてC3'はmasterブランチのすぐ先に作られたC3のコピーということだ。",
+              "気を付けてほしいのは、C3コミットはどこかに残ってるということ（ツリーの中で半透明にしてあります）、そしてC3'は（C3との接続が切れているC3の）コピーがmasterブランチ上に作られているということです。",
               "",
-              "唯一の問題は、masterブランチがまだアップデートされてないこと。ちょっと直してみよう。"
+              "一つ問題が残ってて、masterブランチがまだ最新化されていませんね。ちょっと直してみましょう。。"
             ],
             "command": "git rebase master",
             "beforeCommand": "git commit; git checkout -b bugFix C1; git commit"
@@ -18764,10 +18764,10 @@ require.define("/levels/intro/4.js",function(require,module,exports,__dirname,__
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "masterブランチをチェックアウトしたとするよ。この状態からmasterブランチを`bugFix`へとリベースしてみよう。"
+              "masterブランチはチェックアウトしてあります。この状態からmasterブランチを`bugFix`へとリベースしてみましょう。"
             ],
             "afterMarkdowns": [
-              "こうなる。`master`は`bugFix`の直前のコミットだったので、gitは単純に`master`ブランチのポインタを前に進めただけだ。"
+              "できた！`master`は`bugFix`の直前のコミットだったので、gitは単純に`master`ブランチのポインタを前に進めただけでした。"
             ],
             "command": "git rebase bugFix",
             "beforeCommand": "git commit; git checkout -b bugFix C1; git commit; git rebase master; git checkout master"
@@ -18777,14 +18777,14 @@ require.define("/levels/intro/4.js",function(require,module,exports,__dirname,__
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "以下の作業で理解度の確認をしてみよう。",
+              "以下の作業で理解度の確認をしてみましょう。",
               "",
               "* `bugFix`という名前の新しいブランチをチェックアウトする",
               "* 一回だけコミットする",
               "* masterブランチに戻ってもう1回コミット",
               "* bugFixをもう1回チェックアウトして、master上にリベース",
               "",
-              "以上、幸運を祈る！"
+              "幸運を祈る！"
             ]
           }
         }
@@ -19019,9 +19019,9 @@ require.define("/levels/rampup/2.js",function(require,module,exports,__dirname,_
             "markdowns": [
               "## 変更を元に戻す",
               "",
-              "Gitでは変更を元に戻す時にいろんな方法が使える。コミットと同じように、低レベルな動作（ファイル別だったりファイルの中の一部だったり）も高レベルな動作（変更のまとまりのキャンセル）もできる。ここでは後者の方法について紹介するよ。",
+              "Gitでは変更を元に戻す方法がたくさんあります。コミットと同じように、低レベルな動作（ファイル別だったりファイルの中の一部だったり）も高レベルな動作（変更のまとまりのキャンセル）もできます。このアプリケーションでは後者の方法について紹介します。",
               "",
-              "簡単なアンドゥの方法を2つ紹介する - 一つは`git reset`を使う方法、もう1つは`git revert`を使う方法。次のダイアログで一つ一つを見ていこう。",
+              "基本的なアンドゥの方法が2つあります - 一つは`git reset`を使う方法で、もう1つは`git revert`を使う方法です。次のダイアログで一つ一つを見ていきます。",
               ""
             ]
           }
@@ -19032,12 +19032,12 @@ require.define("/levels/rampup/2.js",function(require,module,exports,__dirname,_
             "beforeMarkdowns": [
               "## Git Reset",
               "",
-              "`git reset`はブランチのポインタを後方に移動することでアンドゥを実現する。履歴を上書きするような動作だと思ってもらっていい。`git reset`はあたかも前のコミットがなかったかのように、ブランチのポインタを元に戻してくれる。",
+              "`git reset`はブランチのポインタを後方に移動することで変更のキャンセルを実現します。履歴を上書きするような動作だと思うと良いでしょうか：`git reset`はそもそも前のコミットなんかなかったかのように、ブランチのポインタを元に戻してくれます。",
               "",
-              "どういう感じか見てみよう。"
+              "どういう感じか見てみましょう。"
             ],
             "afterMarkdowns": [
-              "いいね！Gitは単純にmasterブランチへのポインタを`C1`へ戻した。これでこのローカルリポジトリにはまるで`C2`なんて無かったかのようにアンドゥできた。"
+              "いいですね！Gitは単純にmasterブランチへのポインタを`C1`へ戻しました。これでこのローカルリポジトリにはまるで`C2`なんて無かったかのように変更をキャンセルできました。"
             ],
             "command": "git reset HEAD~1",
             "beforeCommand": "git commit"
@@ -19049,14 +19049,14 @@ require.define("/levels/rampup/2.js",function(require,module,exports,__dirname,_
             "beforeMarkdowns": [
               "## Git Revert",
               "",
-              "自分のマシン上のブランチではさっきの`git reset`でうまくいったけど、他の人も使っているリモートにあるリポジトリに対しては使えない。",
+              "自分のマシン上のブランチではさっきの`git reset`でうまくいきましたが、この「履歴を上書きする」手段は、他の人も使っているリモートにあるリポジトリに対しては使うことができません。",
               "",
-              "変更を巻き戻して他の人とそれを共有するためには、`git revert`を使う必要があるんだ。今度はこれを見てみよう。"
+              "変更を巻き戻して他の人とそれを共有するためには、`git revert`を使う必要があります。今度はこれを見てみましょう。"
             ],
             "afterMarkdowns": [
-              "おかしい。巻き戻したいと思ってたコミットの下に新しいコミットが出来上がってしまったみたいだ。どうしてかというと、この新しい`C2'`コミットは`C2`へ戻すのに必要な内容を確かに変更して巻き戻したんだ。",
+              "あれ、おかしいな。巻き戻したいと思ってたコミットの下に新しいコミットが出来上がってしまったみたいです。なぜか。これは、この新しい`C2'`コミットは`C2`へ戻すのに必要な内容を確かに変更して巻き戻していたのです。",
               "",
-              "こんな風にして、巻き戻した内容を他人と共有するためにはrevertを使う。"
+              "こんな風にして、巻き戻した内容を他人と共有するためにはrevertを使います。"
             ],
             "command": "git revert HEAD",
             "beforeCommand": "git commit"
@@ -19066,9 +19066,9 @@ require.define("/levels/rampup/2.js",function(require,module,exports,__dirname,_
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "この章の仕上げに、`local`と`pushed`の両方の直近のコミットを巻き戻してみよう。",
+              "この章の仕上げに、`local`と`pushed`の両方の直近のコミットを巻き戻してみましょう。",
               "",
-              "`pushed`はリモートのブランチで、`local`はローカルであることに注意。正しくコマンドを使い分けよう。"
+              "`pushed`はリモートのブランチで、`local`はローカルであることに注意。正しくコマンドを使い分けましょう。"
             ]
           }
         }
@@ -20628,18 +20628,18 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
         '',
         '簡単なデモを用意してあるので、もしよければこちらもご覧ください：',
         '',
-        '[http://pcottle.github.com/learnGitBranching/?demo](http://pcottle.github.com/learnGitBranching/?demo)',
+        '[http://remore.github.com/learnGitBranching-ja/?demo](http://remore.github.com/learnGitBranching-ja/?demo)',
         '',
-        '次回以降このダイアログを表示させないようにするには、以下のようにURLの末尾にクエリストリング`?NODEMO`を付加してアクセスしてください。',
+        'このダイアログ自体を省略するには、以下のようにURLの末尾にクエリストリング`?NODEMO`を付加してアクセスしてください。',
         '',
-        '[http://pcottle.github.com/learnGitBranching/?NODEMO](http://pcottle.github.com/learnGitBranching/?NODEMO)'
+        '[http://remore.github.com/learnGitBranching-ja/?NODEMO](http://remore.github.com/learnGitBranching-ja/?NODEMO)'
       ]
     }
   }, {
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## Git commands',
+        '## ここで学べるGitのオペレーション',
         '',
         'ここでは、下記の種類のgitコマンドを学ぶことができます。',
         '',
@@ -20680,11 +20680,11 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
         '',
         '如果你还没看过演示，请到此查看：',
         '',
-        '[http://pcottle.github.com/learnGitBranching/?demo](http://pcottle.github.com/learnGitBranching/?demo)',
+        '[http://remore.github.com/learnGitBranching-ja/?demo](http://remore.github.com/learnGitBranching-ja/?demo)',
         '',
         '厌烦这个对话框？ 在 URL 后头加上 `?NODEMO` 就看不到它了，也可以直接点下边这个链接：',
         '',
-        '[http://pcottle.github.com/learnGitBranching/?NODEMO](http://pcottle.github.com/learnGitBranching/?NODEMO)'
+        '[http://remore.github.com/learnGitBranching-ja/?NODEMO](http://remore.github.com/learnGitBranching-ja/?NODEMO)'
       ]
     }
   }, {
@@ -20749,7 +20749,7 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
     type: 'ModalAlert',
     options: {
       markdowns: [
-        // '## Git commands',
+        // '## ここで学べるGitのオペレーション',
         '## Git 명령어',
         '',
         // 'ここでは、下記の種類のgitコマンドを学ぶことができます。',
@@ -21200,10 +21200,10 @@ require.define("/src/js/dialogs/nextLevel.js",function(require,module,exports,__
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## Great Job!!',
+        '## 完成!',
         '',
-        'You solved the level in *{numCommands}* command(s); ',
-        'our solution uses {best}.'
+        'あなたは*{numCommands}*回のコマンドでこの課題をクリアしました; ',
+        '模範解答では{best}回です。'
       ]
     }
   }],
@@ -21239,18 +21239,18 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
         '',
         '簡単なデモを用意してあるので、もしよければこちらもご覧ください：',
         '',
-        '[http://pcottle.github.com/learnGitBranching/?demo](http://pcottle.github.com/learnGitBranching/?demo)',
+        '[http://remore.github.com/learnGitBranching-ja/?demo](http://remore.github.com/learnGitBranching-ja/?demo)',
         '',
-        '次回以降このダイアログを表示させないようにするには、以下のようにURLの末尾にクエリストリング`?NODEMO`を付加してアクセスしてください。',
+        'このダイアログ自体を省略するには、以下のようにURLの末尾にクエリストリング`?NODEMO`を付加してアクセスしてください。',
         '',
-        '[http://pcottle.github.com/learnGitBranching/?NODEMO](http://pcottle.github.com/learnGitBranching/?NODEMO)'
+        '[http://remore.github.com/learnGitBranching-ja/?NODEMO](http://remore.github.com/learnGitBranching-ja/?NODEMO)'
       ]
     }
   }, {
     type: 'ModalAlert',
     options: {
       markdowns: [
-        '## Git commands',
+        '## ここで学べるGitのオペレーション',
         '',
         'ここでは、下記の種類のgitコマンドを学ぶことができます。',
         '',
@@ -21291,11 +21291,11 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
         '',
         '如果你还没看过演示，请到此查看：',
         '',
-        '[http://pcottle.github.com/learnGitBranching/?demo](http://pcottle.github.com/learnGitBranching/?demo)',
+        '[http://remore.github.com/learnGitBranching-ja/?demo](http://remore.github.com/learnGitBranching-ja/?demo)',
         '',
         '厌烦这个对话框？ 在 URL 后头加上 `?NODEMO` 就看不到它了，也可以直接点下边这个链接：',
         '',
-        '[http://pcottle.github.com/learnGitBranching/?NODEMO](http://pcottle.github.com/learnGitBranching/?NODEMO)'
+        '[http://remore.github.com/learnGitBranching-ja/?NODEMO](http://remore.github.com/learnGitBranching-ja/?NODEMO)'
       ]
     }
   }, {
@@ -21360,7 +21360,7 @@ require.define("/src/js/dialogs/sandbox.js",function(require,module,exports,__di
     type: 'ModalAlert',
     options: {
       markdowns: [
-        // '## Git commands',
+        // '## ここで学べるGitのオペレーション',
         '## Git 명령어',
         '',
         // 'ここでは、下記の種類のgitコマンドを学ぶことができます。',
@@ -24121,19 +24121,19 @@ require.define("/src/js/intl/strings.js",function(require,module,exports,__dirna
   ///////////////////////////////////////////////////////////////////////////
   'finish-dialog-finished': {
     '__desc__': 'One of the lines in the next level dialog',
-    'en_US': 'Wow! You finished the last level, great!',
+    'en_US': '最後のレベルをクリアしました！すごい！！',
     'zh_CN': '我的个天！你完成了最后一关，碉堡了！'
   },
   ///////////////////////////////////////////////////////////////////////////
   'finish-dialog-next': {
     '__desc__': 'One of the lines in the next level dialog',
-    'en_US': 'Would you like to move onto *"{nextLevel}"*, the next level?',
+    'en_US': '次の章 *"{nextLevel}"* へ進みますか？',
     'zh_CN': '要不前进到下一关 *“{nextLevel}”*？'
   },
   ///////////////////////////////////////////////////////////////////////////
   'finish-dialog-win': {
     '__desc__': 'One of the lines in the next level dialog',
-    'en_US': 'Awesome! You matched or exceeded our solution.',
+    'en_US': '素晴らしい！このレベルをクリアしましたね。',
     'zh_CN': '牛鼻啊！你达到或者完爆了我们的答案。'
   },
   ///////////////////////////////////////////////////////////////////////////
@@ -27904,7 +27904,7 @@ var GitDemonstrationView = ContainedBase.extend({
     this.JSON = _.extend(
       {
         beforeMarkdowns: [
-          '## git commit',
+          '## Gitのコミット',
           '',
           'Awesome!'
         ],
@@ -32091,18 +32091,18 @@ require.define("/src/levels/intro/1.js",function(require,module,exports,__dirnam
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "## git commit",
-              "git commitを使うことで、ディレクトリ中の全てのファイルのスナップショットを記録できます。壮大なコピペのような動作を連想しますが、実はそれよりずっと良いものです。",
+              "## Gitのコミット",
+              "コミットによって、ディレクトリ中の全てのファイルのスナップショットを記録します。巨大なコピー＆ペーストのようなものですが、実はそれよりずっと良いものです。",
               "",
               "Gitではコミットを可能な限り軽量に保つために、コミット毎にフォルダ全体をコピーしません。実際にはGitは、コミットを直前のバージョンから一つ先のバージョンへの「変更の固まり」あるいは「差分」として記録します。後で出てきますが、ほとんどのコミットが親を持っているのはそういう理由からです。",
               "",
-              "リポジトリをcloneする時には、内部動作としてはコミットの差分をたどって全ての変更を取得しています。cloneした時に以下のような表示が出るのは",
+              "リポジトリをcloneする時には、内部動作としてはコミットの差分をたどって全ての変更を取得しています。cloneした時に以下のような表示が出るのは：",
               "",
               "`resolving deltas`（訳：差分を解決中）",
               "",
               "このためです。",
               "",
-              "本当はもっと説明したいのですが、当面はコミットをスナップショットのようなものだと考えてください。コミットは非常に軽量であり、コミット間の移動も非常に高速です。"
+              "もっと説明したいところですが、しばらくはコミットをスナップショットのようなものだと考えてください。コミットは非常に軽量であり、コミット間の移動も非常に高速です。"
             ]
           }
         },
@@ -32110,12 +32110,12 @@ require.define("/src/levels/intro/1.js",function(require,module,exports,__dirnam
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "これがどういうことか、動きを見ていきましょう。図には小さなgitリポジトリが描かれています。仮に2つのコミットがあるとします - 一つは最初のコミットで、`C0`という名前です。次のコミットは`C1`で、何か意味のある変更だとします。",
+              "これがどういうことか、動きを見ていきましょう。図には（小さな）gitリポジトリが描かれています。コミットが2つあります ― `C0`という名前の初回のコミットがあり、`C1`という名前の次のコミットが続きます。これは何か意味のある変更かもしれません。",
               "",
               "下のボタンを押下して新しいコミットを作ってみましょう。"
             ],
             "afterMarkdowns": [
-              "できました! 良いですね。いまリポジトリに新しい変更が加えられ、1つのコミットとして保存されました。作成したコミットには親がいて、`C1`を指しています。これがどのコミットを出発点とした変更かを示しています。"
+              "できました! 良いですね。いまリポジトリに新しい変更が加えられ、1つのコミットとして保存されました。作成したコミットには親がいて、このコミットの出発点となった`C1`を指しています。"
             ],
             "command": "git commit",
             "beforeCommand": ""
@@ -32227,7 +32227,7 @@ require.define("/src/levels/intro/1.js",function(require,module,exports,__dirnam
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "## git commit",
+              "## Gitのコミット",
               "在一个使用 git 进行版本控制的仓库里，一次提交（commit）给你目录下所有文件做了一次快照，就好像是做了一次复制粘贴，但 git 做的不只那么简单！",
               "",
               "Git 希望尽可能地让这些提交记录保持轻量，所以每次在你进行提交的时候，它不会就这么复制整个工作目录。实际上它把每次提交都记录为一个相对于上个版本变化的集合，或者说一个\"差异 （delta）\"集。这也是为什么绝大部分提交都有一个父对象（parent commit） -- 迟点你就会在我们的演示中看见了。",
@@ -32298,15 +32298,15 @@ require.define("/src/levels/intro/2.js",function(require,module,exports,__dirnam
             "markdowns": [
               "## Gitのブランチ",
               "",
-              "Gitではコミットだけでなく、ブランチもまた驚くほど軽量です。ブランチとは単に特定のコミットを指示したポインタにしか過ぎません。Gitの達人は決まってこう言います：",
+              "Gitではコミットだけでなく、ブランチもまた信じられないほど軽量です。ブランチとは単に特定のコミットを指示したポインタにしか過ぎません。Gitの達人は決まってこう言うのは、そのためです：",
               "",
               "```",
               "早めに、かつ頻繁にブランチを切りなさい",
               "```",
               "",
-              "どれほど多くのブランチを作ってもストレージやメモリを全然使わないので、ブランチを切る方が肥大化させるよりも簡単なのです。",
+              "どれほど多くのブランチを作ってもストレージやメモリを全然使わないので、ブランチを肥大化させるよりも論理的に分割していく方が簡単なのです。",
               "",
-              "ブランチやコミットを編集し始めると、これらのフィーチャがどのように使われていくががわかります。ここではとりあえず、ブランチは基本的には「あるコミットとその親のコミットたちを含めた全てのコミット」のことを呼ぶと覚えておいてください。"
+              "ブランチとコミットをあわせて使い始めると、これら2つのフィーチャがどのように連動して機能するかがわかるでしょう。ここではとりあえず、ブランチは基本的には「あるコミットとその親のコミットたちを含めた全てのコミット」のことを呼ぶと覚えておいてください。"
             ]
           }
         },
@@ -32314,12 +32314,12 @@ require.define("/src/levels/intro/2.js",function(require,module,exports,__dirnam
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "実際にブランチがどのように機能するかを見ていきましょう。",
+              "では実際にブランチがどのようなものかを見ていきましょう。",
               "",
               "`newImage`という名前の新しいブランチを切ってみることにします。"
             ],
             "afterMarkdowns": [
-              "必要な手順はこれだけです。いま作成された`newImage`ブランチは`C1`コミットを指しています。"
+              "以上。必要な手順はこれだけです。いま作成された`newImage`ブランチは`C1`コミットを指しています。"
             ],
             "command": "git branch newImage",
             "beforeCommand": ""
@@ -32342,16 +32342,16 @@ require.define("/src/levels/intro/2.js",function(require,module,exports,__dirnam
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "gitに作業したいブランチ名を伝えることにしましょう。",
+              "今度は作業したいブランチ名をgitに伝えてみましょう。",
               "",
               "```",
               "git checkout [ブランチ名]",
               "```",
               "",
-              "これで作業ブランチを変更することができます。"
+              "このようにして、コミットする前に新しいブランチへと作業ブランチを移動することができます。"
             ],
             "afterMarkdowns": [
-              "できましたね。新しいブランチに対して変更を記録することができました。"
+              "できましたね。今度は新しいブランチに対して変更を記録することができました。"
             ],
             "command": "git checkout newImage; git commit",
             "beforeCommand": "git branch newImage"
@@ -32618,7 +32618,7 @@ require.define("/src/levels/intro/3.js",function(require,module,exports,__dirnam
     "zh_CN": "Git合并(Merge)"
   },
   "hint": {
-    "en_US": "Remember to commit in the order specified (bugFix before master)",
+    "en_US": "指示された順番でコミットすること（masterの前にbugFixで）",
     "fr_FR": "Pensez à faire des commits dans l'ordre indiqué (bugFix avant master)",
     "zh_CN": "记得按照给定的顺序来进行提交(commit) （bugFix 要在 master 之前）",
     "ko": "말씀드린 순서대로 커밋해주세요 (bugFix에 먼저 커밋하고 master에 커밋)"
@@ -32635,9 +32635,9 @@ require.define("/src/levels/intro/3.js",function(require,module,exports,__dirnam
             "markdowns": [
               "## ブランチとマージ",
               "",
-              "いい調子だね。コミットとブランチはもう分かったと思う。そろそろ2つのブランチを1つにまとめるやり方について見ていこう。これができれば新しいフィーチャの開発のために新しいブランチを切ることができるようになる。",
+              "いい調子ですね。これまでにコミットとブランチについて学びました。そろそろ2つのブランチを1つにまとめるやり方について見ていきましょう。これができれば新しいフィーチャの開発のために新しいブランチを切って、開発が終わったら変更を元のブランチへ統合することができるようになります。",
               "",
-              "まずは`git merge`を使ったマージのやり方から見ていこう。マージすると、2つの親コミットを持つ新しいコミットが生まれる。2つの親コミットを持つことによって、「私の内容には2つの親コミットとその先祖の全ての変更を含んでいる」ということを意味します。",
+              "はじめに紹介するのは、`git merge`を使ったマージのやり方です。mergeコマンドによって、2つの独立した親を持つ特別なコミットを作ることができます。2つの親を持つコミットが持つ意味とは、「全く別々の場所にいるこの親とその親（*かつ*、それらの親の祖先全て）が持つ全ての変更を含んでいますよ」ということです。",
               "",
               "見てみた方が早いので、次の画面で確認してみましょう。"
             ]
@@ -32647,16 +32647,16 @@ require.define("/src/levels/intro/3.js",function(require,module,exports,__dirnam
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "それぞれ別のコミットを指している2つのブランチがあります。最新のコードが別のブランチに分散していて統合されていないケースです。これをマージで1つにまとめてみましょう。",
+              "それぞれ別のコミットを指している2つのブランチがあります。変更が別々のブランチに分散していて統合されていないケースです。これをマージで1つにまとめてみましょう。",
               "",
-              "`bugFix`ブランチを`master`ブランチにマージしたい場合は、"
+              "`bugFix`ブランチを`master`ブランチにマージしてみます。"
             ],
             "afterMarkdowns": [
-              "わあ、見た見た？`master`ブランチが2つのコミットを親に持つ新しいコミットを指してますね。`master`から親をたどっていくと、最も古いコミットにたどり着くまでに全てのコミットを含んでいる様が確認できます。これで、全てのコードを含む`master`が完成しました。",
+              "わあ。見ましたか？まず初めに、`master`ブランチが2つのコミットを親に持つ新しいコミットを指してますね。`master`から親をたどっていくと、最も古いコミットにたどり着くまでに全てのコミットを含んでいる様が確認できます。これで、全ての変更を含む`master`が完成しました。",
               "",
-              "色がどう変わったかにも注目してみよう。学習を助けるために、ブランチ毎に色をつけています。どのブランチから派生して出てくるか次第で、コミットごとの色が決まります。",
+              "色がどう変わったかにも注目して下さい。学習を助けるために、ブランチ毎に色をつけています。それぞれのブランチは自分の色を持っていて、どのブランチから派生して出てくるか次第でコミットごとの色が決まります。",
               "",
-              "話を戻して、今回のコミットには`master`ブランチの色が使われました。`bugFix`ブランチの色は変わってないようなので、これを変えてみましょう。"
+              "今回のコミットには`master`ブランチの色が使われました。しかし`bugFix`ブランチの色がまだ変わってないようなので、これを変えてみましょう。"
             ],
             "command": "git merge bugFix",
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit"
@@ -32669,9 +32669,9 @@ require.define("/src/levels/intro/3.js",function(require,module,exports,__dirnam
               "`master`ブランチを`bugFix`ブランチにマージしてみます。"
             ],
             "afterMarkdowns": [
-              "`bugFix`ブランチは`master`ブランチの派生元だったので、gitは大したことはしていません：`bugFix`ブランチを指していたポインタを`master`が指していたコミットへと移動させただけです。",
+              "`bugFix`ブランチは`master`ブランチの派生元だったので、gitは実際大したことはしていません：`bugFix`ブランチを指していたポインタを`master`が指していたコミットへと移動させただけです。",
               "",
-              "これで全てのコミットが同じ色になりました。つまり、両方のブランチがリポジトリの中の全ての変更を持ったことになります。やったね！"
+              "これで全てのコミットが同じ色になりました。つまり、リポジトリの中の全ての変更をそれぞれのブランチが持ったことになります。やったね！"
             ],
             "command": "git checkout bugFix; git merge master",
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit; git merge bugFix"
@@ -32681,7 +32681,7 @@ require.define("/src/levels/intro/3.js",function(require,module,exports,__dirnam
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "今回のレベルの仕上げに、下記の手順を試してみよう：",
+              "今回のレベルの仕上げに、下記の手順を試してみましょう：",
               "",
               "* `bugFix`という名前で新しいブランチを切る",
               "* `git checkout bugFix`コマンドで`bugFix`ブランチをチェックアウトする",
@@ -32716,16 +32716,16 @@ require.define("/src/levels/intro/3.js",function(require,module,exports,__dirnam
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "それぞれ別のコミットを指している2つのブランチがあります。最新のコードが別のブランチに分散していて統合されていないケースです。これをマージで1つにまとめてみましょう。",
+              "それぞれ別のコミットを指している2つのブランチがあります。変更が別々のブランチに分散していて統合されていないケースです。これをマージで1つにまとめてみましょう。",
               "",
-              "`bugFix`ブランチを`master`ブランチにマージしたい場合は、"
+              "`bugFix`ブランチを`master`ブランチにマージしてみます。"
             ],
             "afterMarkdowns": [
-              "わあ、見た見た？`master`ブランチが2つのコミットを親に持つ新しいコミットを指してますね。`master`から親をたどっていくと、最も古いコミットにたどり着くまでに全てのコミットを含んでいる様が確認できます。これで、全てのコードを含む`master`が完成しました。",
+              "わあ。見ましたか？まず初めに、`master`ブランチが2つのコミットを親に持つ新しいコミットを指してますね。`master`から親をたどっていくと、最も古いコミットにたどり着くまでに全てのコミットを含んでいる様が確認できます。これで、全ての変更を含む`master`が完成しました。",
               "",
-              "色がどう変わったかにも注目してみよう。学習を助けるために、ブランチ毎に色をつけています。どのブランチから派生して出てくるか次第で、コミットごとの色が決まります。",
+              "色がどう変わったかにも注目して下さい。学習を助けるために、ブランチ毎に色をつけています。それぞれのブランチは自分の色を持っていて、どのブランチから派生して出てくるか次第でコミットごとの色が決まります。",
               "",
-              "話を戻して、今回のコミットには`master`ブランチの色が使われました。`bugFix`ブランチの色は変わってないようなので、これを変えてみましょう。"
+              "今回のコミットには`master`ブランチの色が使われました。しかし`bugFix`ブランチの色がまだ変わってないようなので、これを変えてみましょう。"
             ],
             "command": "git merge bugFix",
             "beforeCommand": "git checkout -b bugFix; git commit; git checkout master; git commit"
@@ -32936,11 +32936,11 @@ require.define("/src/levels/intro/4.js",function(require,module,exports,__dirnam
             "markdowns": [
               "## Git Rebase",
               "",
-              "前回紹介したマージに続いて、ブランチを一つにまとめるために今回紹介するリベースを使うこともできる。リベースの動作は、マージするコミットのコピーをとってストンと落とすって感じ。",
+              "ブランチを一つにまとめる方法として前回はマージを紹介しましたが、今回紹介するリベースを使うこともできます。リベースの動作は、マージするコミットのコピーをとって、どこかにストンと落とすというイメージです。",
               "",
-              "まだしっくりこないと思うんだけど、リベースのメリットは一本の連続したシーケンシャルなコミットに整形できることなんだ。リベースだけ使っていれば、コミットのログや履歴をクリーンな状態に保ちやすい。",
+              "ピンと来ないかもしれませんが、リベースのメリットは一本の連続したシーケンシャルなコミットに整形できることです。リベースだけ使っていると、コミットのログや履歴が非常にクリーンな状態に保たれます。",
               "",
-              "早速実際にどう動くのかを見てみよう。"
+              "早速実際にどう動くのかを見てみましょう。"
             ]
           }
         },
@@ -32948,18 +32948,18 @@ require.define("/src/levels/intro/4.js",function(require,module,exports,__dirnam
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "もう1度2つのブランチを例にして説明すると：仮にいまbugFixブランチをチェックアウトしているとする。（アスタリスクつきのやつ）",
+              "前回と同様の2つのブランチを考えます：仮にいまbugFixブランチをチェックアウトしているとします。（アスタリスクつきのもの）",
               "",
-              "bufFixに入ってる作業内容をそのまま直接masterブランチ上の内容に移動したい。こうすることで、実際には並行して開発された2つの別々のブランチ上のフィーチャを、あたかも1本のブランチ上でシーケンシャルに開発されたように見せれる。",
+              "bugFixに入ってる作業内容をそのまま直接masterブランチ上の内容に移動したいとします。こうすることで、実際には並行して開発された2つの別々のブランチ上のフィーチャを、あたかも1本のブランチ上でシーケンシャルに開発されていたかのように見せることができます。",
               "",
-              "`git rebase`コマンドでそれをやってみよう。"
+              "`git rebase`コマンドでそれをやってみましょう。"
             ],
             "afterMarkdowns": [
-              "できた！これでbugFixブランチの作業内容はmasterブランチのすぐ先に移動したから、見た目が一本になってスッキリした。",
+              "できた！これでbugFixブランチの作業内容はmasterブランチのすぐ先に移動したので、見た目が一本になってスッキリしました。",
               "",
-              "気を付けてほしいのは、C3コミットはどこかに残ってるということ（ツリーの中で半透明にしてある）、そしてC3'はmasterブランチのすぐ先に作られたC3のコピーということだ。",
+              "気を付けてほしいのは、C3コミットはどこかに残ってるということ（ツリーの中で半透明にしてあります）、そしてC3'は（C3との接続が切れているC3の）コピーがmasterブランチ上に作られているということです。",
               "",
-              "唯一の問題は、masterブランチがまだアップデートされてないこと。ちょっと直してみよう。"
+              "一つ問題が残ってて、masterブランチがまだ最新化されていませんね。ちょっと直してみましょう。。"
             ],
             "command": "git rebase master",
             "beforeCommand": "git commit; git checkout -b bugFix C1; git commit"
@@ -32969,10 +32969,10 @@ require.define("/src/levels/intro/4.js",function(require,module,exports,__dirnam
           "type": "GitDemonstrationView",
           "options": {
             "beforeMarkdowns": [
-              "masterブランチをチェックアウトしたとするよ。この状態からmasterブランチを`bugFix`へとリベースしてみよう。"
+              "masterブランチはチェックアウトしてあります。この状態からmasterブランチを`bugFix`へとリベースしてみましょう。"
             ],
             "afterMarkdowns": [
-              "こうなる。`master`は`bugFix`の直前のコミットだったので、gitは単純に`master`ブランチのポインタを前に進めただけだ。"
+              "できた！`master`は`bugFix`の直前のコミットだったので、gitは単純に`master`ブランチのポインタを前に進めただけでした。"
             ],
             "command": "git rebase bugFix",
             "beforeCommand": "git commit; git checkout -b bugFix C1; git commit; git rebase master; git checkout master"
@@ -32982,14 +32982,14 @@ require.define("/src/levels/intro/4.js",function(require,module,exports,__dirnam
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "以下の作業で理解度の確認をしてみよう。",
+              "以下の作業で理解度の確認をしてみましょう。",
               "",
               "* `bugFix`という名前の新しいブランチをチェックアウトする",
               "* 一回だけコミットする",
               "* masterブランチに戻ってもう1回コミット",
               "* bugFixをもう1回チェックアウトして、master上にリベース",
               "",
-              "以上、幸運を祈る！"
+              "幸運を祈る！"
             ]
           }
         }
@@ -33663,9 +33663,9 @@ require.define("/src/levels/rampup/2.js",function(require,module,exports,__dirna
             "markdowns": [
               "## 変更を元に戻す",
               "",
-              "Gitでは変更を元に戻す時にいろんな方法が使える。コミットと同じように、低レベルな動作（ファイル別だったりファイルの中の一部だったり）も高レベルな動作（変更のまとまりのキャンセル）もできる。ここでは後者の方法について紹介するよ。",
+              "Gitでは変更を元に戻す方法がたくさんあります。コミットと同じように、低レベルな動作（ファイル別だったりファイルの中の一部だったり）も高レベルな動作（変更のまとまりのキャンセル）もできます。このアプリケーションでは後者の方法について紹介します。",
               "",
-              "簡単なアンドゥの方法を2つ紹介する - 一つは`git reset`を使う方法、もう1つは`git revert`を使う方法。次のダイアログで一つ一つを見ていこう。",
+              "基本的なアンドゥの方法が2つあります - 一つは`git reset`を使う方法で、もう1つは`git revert`を使う方法です。次のダイアログで一つ一つを見ていきます。",
               ""
             ]
           }
@@ -33676,12 +33676,12 @@ require.define("/src/levels/rampup/2.js",function(require,module,exports,__dirna
             "beforeMarkdowns": [
               "## Git Reset",
               "",
-              "`git reset`はブランチのポインタを後方に移動することでアンドゥを実現する。履歴を上書きするような動作だと思ってもらっていい。`git reset`はあたかも前のコミットがなかったかのように、ブランチのポインタを元に戻してくれる。",
+              "`git reset`はブランチのポインタを後方に移動することで変更のキャンセルを実現します。履歴を上書きするような動作だと思うと良いでしょうか：`git reset`はそもそも前のコミットなんかなかったかのように、ブランチのポインタを元に戻してくれます。",
               "",
-              "どういう感じか見てみよう。"
+              "どういう感じか見てみましょう。"
             ],
             "afterMarkdowns": [
-              "いいね！Gitは単純にmasterブランチへのポインタを`C1`へ戻した。これでこのローカルリポジトリにはまるで`C2`なんて無かったかのようにアンドゥできた。"
+              "いいですね！Gitは単純にmasterブランチへのポインタを`C1`へ戻しました。これでこのローカルリポジトリにはまるで`C2`なんて無かったかのように変更をキャンセルできました。"
             ],
             "command": "git reset HEAD~1",
             "beforeCommand": "git commit"
@@ -33693,14 +33693,14 @@ require.define("/src/levels/rampup/2.js",function(require,module,exports,__dirna
             "beforeMarkdowns": [
               "## Git Revert",
               "",
-              "自分のマシン上のブランチではさっきの`git reset`でうまくいったけど、他の人も使っているリモートにあるリポジトリに対しては使えない。",
+              "自分のマシン上のブランチではさっきの`git reset`でうまくいきましたが、この「履歴を上書きする」手段は、他の人も使っているリモートにあるリポジトリに対しては使うことができません。",
               "",
-              "変更を巻き戻して他の人とそれを共有するためには、`git revert`を使う必要があるんだ。今度はこれを見てみよう。"
+              "変更を巻き戻して他の人とそれを共有するためには、`git revert`を使う必要があります。今度はこれを見てみましょう。"
             ],
             "afterMarkdowns": [
-              "おかしい。巻き戻したいと思ってたコミットの下に新しいコミットが出来上がってしまったみたいだ。どうしてかというと、この新しい`C2'`コミットは`C2`へ戻すのに必要な内容を確かに変更して巻き戻したんだ。",
+              "あれ、おかしいな。巻き戻したいと思ってたコミットの下に新しいコミットが出来上がってしまったみたいです。なぜか。これは、この新しい`C2'`コミットは`C2`へ戻すのに必要な内容を確かに変更して巻き戻していたのです。",
               "",
-              "こんな風にして、巻き戻した内容を他人と共有するためにはrevertを使う。"
+              "こんな風にして、巻き戻した内容を他人と共有するためにはrevertを使います。"
             ],
             "command": "git revert HEAD",
             "beforeCommand": "git commit"
@@ -33710,9 +33710,9 @@ require.define("/src/levels/rampup/2.js",function(require,module,exports,__dirna
           "type": "ModalAlert",
           "options": {
             "markdowns": [
-              "この章の仕上げに、`local`と`pushed`の両方の直近のコミットを巻き戻してみよう。",
+              "この章の仕上げに、`local`と`pushed`の両方の直近のコミットを巻き戻してみましょう。",
               "",
-              "`pushed`はリモートのブランチで、`local`はローカルであることに注意。正しくコマンドを使い分けよう。"
+              "`pushed`はリモートのブランチで、`local`はローカルであることに注意。正しくコマンドを使い分けましょう。"
             ]
           }
         }
