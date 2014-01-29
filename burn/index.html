@@ -1,0 +1,125 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Burn - A Toolkit To Create 8-bit Application</title>
+  <link rel="stylesheet" href="burn.css" />
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <link href="shCore.css" rel="stylesheet" type="text/css" />
+  <link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+  <style>
+    .syntaxhighlighter {
+      overflow-y: hidden !important;
+    }
+  </style>
+  <script src="shCore.js" type="text/javascript"></script>
+  <script src="shBrushRuby.js" type="text/javascript"></script>
+  <script src="shBrushPlain.js" type="text/javascript"></script>
+</head>
+
+<header>
+  <a href="index.html"><img src="icon_24187.png" width="180" height="180" alt="Burn Logo" /></a>
+</header>
+
+<article>
+  <div style="text-align:center;">
+    <h1>Burn</h1>
+
+    <p class="comment">
+      A Toolkit To Create 8-bit Flavored Application
+    </p>
+  </div>
+
+  <div>
+<p>Burn is a free and open source framework that allows you to create 8-bit flavored application using Ruby DSL.</p>
+
+<div class="code_container box">
+<pre class="brush: ruby; gutter: false; toolbar: false">
+    scene do
+      label "Hello, World!"
+    end
+</pre>
+</div>
+
+<p>Just like Recipe and Cookbook are DSL for Chef rubygem, this dead simple DSL is for Burn rubygem, and we call it Fuel. Burning this Fuel will produce <a href="resource/example/hello-world/emulator.html">this</a>.</p>
+
+<p><img src="resource/screenshot/hello-world.png" style="display:block; margin:auto;"></p>
+
+<p>Here is another example. With Fuel DSL, you can even compose background music in 1 minute.</p>
+
+<div class="code_container box">
+<pre class="brush: ruby; gutter: false; toolbar: false">
+    scene do
+      label "Hello, World!"
+      play "openning"
+    end
+
+    music "openning" do
+      tempo :allegro
+      channel "piano" do
+        segno
+        g :dotted
+        g :eighth, :staccato
+        a :dotted
+        a :eighth, :staccato
+        dal_segno
+      end
+    end
+</pre>
+</div>
+
+<p>Check <a href="resource/example/hello-world-with-music/emulator.html">the output</a> from this(take note that it SOUNDS).</p>
+
+<p>Would you like to design retro 8-bit graphics? Burn following Fuel, and you'll get <a href="resource/example/star/emulator.html">this</a>.</p>
+
+<div class="code_container box">
+<pre class="brush: ruby; gutter: false; toolbar: false">
+    declare do
+      star <<-EOH
+                    
+           11       
+           11       
+          1111      
+          1111      
+    1111111111111111
+     11111111111111 
+      111111111111  
+       1111111111   
+        11111111    
+        11111111    
+        11111111    
+       1111  1111   
+       11      11   
+      1          1  
+                    
+    EOH
+    end
+    
+    scene do
+      main_loop <<-EOH
+        star.x=20
+        star.y-=3
+        sprite "star"
+    EOH
+    end
+</pre>
+</div>
+
+<p><img src="resource/screenshot/star.gif" style="display:block; margin:auto;"></p>
+
+<p>More Fuel DSL can be found at <a href="fuel.html">Fuel DSL</a> page. For more information, visit our <a href="https://github.com/remore/burn">github repository</a> where all the how-to including installation and usage is documented.(actually you only need to type "gem install burn" then you are ready to start.)</p>
+
+<p>Wish you enjoy.</p>
+
+<div style="text-align:center;">
+  <iframe src="http://ghbtns.com/github-btn.html?user=remore&repo=burn&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://k.swd.cc/burn/" data-hashtags="burn_rubygem">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+  </div>
+</article>
+
+<script>SyntaxHighlighter.all();</script>
+
+</html>
